@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container h1 {
+  color: #000000;
+  font-family: "Oswald";
+}
+
+.back {
+  display: flex;
+  width: 120px;
+  background-color: rgb(255, 208, 0);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 3px;
+  font-family: "Oswald";
+  justify-content: center;
+  color: #000000;
+}
+
+.back:hover {
+  background-color: #9b7200;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Espaciado entre los botones */
+  justify-content: center; /* Centra los botones */
+  align-items: center;
+}
+
+.rdt_TableCol {
+  background-color: #000000; 
+  color: #ffffff;
+  justify-content: center;  
+}
+
+.rdt_TableCell {
+  background-color: rgb(151, 210, 210);  
+  justify-content: center;
+}
+
+.search-and-add {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 15px; 
+}
+
+.search-input {
+  display: flex;  
+  flex: 1;
+  padding: 0 5px;
+  height: 40px;
+  border-radius: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #141313;
+  color: #ffffff;
+}
+
+.add-sale {
+  display: flex;
+  flex-shrink: 0; 
+  align-self: end;
+  width: 100px;
+  background-color: chartreuse;
+  font-family: "Oswald";
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  justify-content: center;
+  color: #000000;
+}
+
+.add-sale:hover {
+  background-color: darkgreen;
+  color: aliceblue;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 8px;  
+}
+
+.edit-button {
+  background-color: #9b7200;
+}
+
+.edit-button:hover{
+  background-color: #eeb10a;
+}
+
+.delete-button {
+  background-color: #83000d;
+}
+
+.delete-button:hover {
+  background-color: #ff0019;
+}
+
+@media (max-width: 950px) {
+  #root {
+    width: 100vw;
+    padding: 1vw;
+  }
+
+  .search-and-add {
+    flex-direction: column; /* Cambia a diseño vertical */
+    gap: 10px; /* Espaciado entre los elementos */
+  }  
+}
+

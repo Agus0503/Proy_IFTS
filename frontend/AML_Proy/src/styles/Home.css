@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
+
+/* Estilo básico del cuerpo */
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal del home */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #3c88f3, #f9f9f9 70%, #ca8c8c); /* Degradado de azul claro a blanco y rojo suave */  
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+/* Título principal */
+.home-title {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Oswald";
+}
+
+/* Contenedor de botones de navegación */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones */
+.nav-button {
+  width: 250px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #0015b4;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s; /* Animación de hover */
+}
+
+/* Hover de los botones */
+.nav-button:hover {
+  background-color: #a70303; /* Azul más oscuro */
+  transform: translateY(-5px); /* Elevar ligeramente el botón */
+}
+
+
+footer {
+  display: flex;
+  font-family: "Oswald";
+  font-size: large;
+}
+
+/* Estilo responsive */
+@media (min-width: 768px) {
+  .nav-buttons {
+    flex-direction: row; /* Cambiar a fila en pantallas más grandes */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+    gap: 15px;
+  }
+  .nav-button {
+    flex: 1 1 calc(50% - 30px); /* Ancho del 50% menos el espacio de los bordes */
+    margin: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-buttons {
+    gap: 10px;
+  }
+  .nav-button {
+    flex: 1 1 calc(33.333% - 20px); /* Ancho del 33.33% para pantallas más grandes */
+    margin: 5px;
+  }
+}

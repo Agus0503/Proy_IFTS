@@ -1,0 +1,87 @@
+/* SaleForm.css */
+
+.sale-form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sale-form-container h2 {
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sale-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sale-form-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #393939;
+  }
+  
+  .sale-form-container input[type="text"],
+  .sale-form-container input[type="number"],
+  .sale-form-container input[type="date"],
+  .sale-form-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .sale-form-container input:focus {
+    border-color: #007BFF;
+  }
+  
+  .sale-form-container .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .sale-form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sale-form-container button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  .sale-form-container button[type="submit"]:hover {
+    background-color: #014c9c;
+  }
+  
+  .sale-form-container button[type="button"] {
+    background-color: #d4403b;
+    color: #fff;
+  }
+  
+  .sale-form-container button[type="button"]:hover {
+    background-color: #ba1d18;
+  }
+  
+  .error-message {
+    color: #a41510;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  

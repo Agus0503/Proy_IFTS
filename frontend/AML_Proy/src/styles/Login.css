@@ -1,0 +1,204 @@
+/* Fondo con degradado inspirado en Francia */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #007bff, #ececec 50%, #de1212);
+  background-size: 128% 128%;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.logo {
+  background-image: url('../../public/logo-circulo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* O utiliza fixed si quieres que esté siempre en el mismo lugar */
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  /* Ajusta el tamaño según sea necesario */
+  height: 100px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: pulse 1.5s infinite ease-in-out;  
+}
+
+.logo.loaded {
+  opacity: 1;
+}
+
+
+/* Contenedor del formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fondo con transparencia */
+  border: 1.5px solid black;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 20px;
+  /* Añadir márgenes laterales */
+  animation: slideIn 0.8s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Menor intensidad */
+}
+
+/* Entrada de texto */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 0.5px solid #030303;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  /* Espacio para el icono */
+}
+
+.form-input:focus {
+  outline: none;
+  border: 1.5px solid #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+.form-input[type="text"] {
+  background-image: url('../../public/user-icon.svg');
+  /* Ruta del icono */
+}
+
+.form-input[type="password"] {
+  background-image: url('../../public/password-icon.svg');
+}
+
+/* Botón del formulario */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s;
+  background: linear-gradient(135deg, #0056b3, #0879f3);
+  background-size: 200%;
+  transition: background-position 0.5s, box-shadow 0.2s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #0254a7;
+  /* Azul más oscuro */
+  color: #ffffff;
+  /* Contraste máximo */
+  background-position: right;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-button:focus {
+  outline: 2px dashed #0056b3;
+  outline-offset: 4px;
+}
+
+/* Espaciado entre los botones */
+.form-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Ajuste del espacio entre los botones */
+  width: 100%;
+}
+
+/* Título del formulario */
+h1 {
+  margin-bottom: 20px;
+  color: #001bb3;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Opcional: añadir detalles decorativos sutiles */
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 90px;
+  height: 90px;
+
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.form-container::after {
+  content: "¡Welcome Back!";
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+}

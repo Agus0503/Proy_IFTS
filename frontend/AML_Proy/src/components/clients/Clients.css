@@ -1,0 +1,46 @@
+.container {
+    background: linear-gradient(to right, #0e68c1, #94bad4);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table th {
+    background-color: #21262c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  
+  .table td {
+    padding: 10px;
+    border: 1px solid #fbfafa;
+    text-align: center;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .button-edit {
+    background-color: #f1c40f;
+  }
+  
+  .button-delete {
+    background-color: #f20000;
+    margin-left: 0.5px;
+  }
+
+  
+

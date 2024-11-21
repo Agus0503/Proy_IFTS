@@ -1,0 +1,21 @@
+# Entornos virtuales
+.env
+*.pyc
+__pycache__/
+
+# Configuración específica de IDEs
+.idea/
+.vscode/
+
+# Archivos estáticos generados
+/static/
+staticfiles/
+
+# Archivos de migraciones
+**/migrations/*
+
+
+db.sqlite3
+
+media/
+venv/

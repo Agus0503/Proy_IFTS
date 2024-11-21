@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
+
+/* .table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-container {
+  max-width: 100%; 
+  overflow-x: auto;
+  margin: 20px auto;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.table-container h1 {
+  color: #000000;
+  font-family: "Oswald";
+}
+
+.back {
+  display: flex;
+  width: 120px;
+  background-color: rgb(255, 208, 0);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 3px;
+  font-family: "Oswald";
+  justify-content: center;
+  color: #000000;
+}
+
+.back:hover {
+  background-color: #9b7200;
+}
+
+
+.rdt_TableCol {
+  background-color: #000000; 
+  color: #ffffff;
+  justify-content: center;  
+}
+
+.rdt_TableCell {
+  background-color: rgb(151, 210, 210);  
+  justify-content: center;
+}
+
+
+.search-input {
+  display: flex;  
+  padding: 0 5px;
+  height: 40px;
+  border-radius: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #141313;
+  color: #ffffff;
+}
+
+.add-sale {
+  display: flex;
+  align-self: end;
+  width: 100px;
+  background-color: chartreuse;
+  font-family: "Oswald";
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  justify-content: center;
+  color: #000000;
+}
+
+.add-sale:hover {
+  background-color: darkgreen;
+  color: aliceblue;
+}
+
+.edit-button, .delete-button {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.edit-button {
+  background-color: #9b7200;
+}
+
+.edit-button:hover{
+  background-color: #eeb10a;
+}
+
+.delete-button {
+  background-color: #83000d;
+}
+
+.delete-button:hover {
+  background-color: #ff0019;
+}
+
+@media (max-width: 950px) {
+  #root {
+    width: 100vw;
+    padding: 1vw;
+  }
+}
+ */
+/* Contenedor de los productos */
+.products-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+ 
+}
+
+/* Título del catálogo */
+.products-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Barra de búsqueda */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Botón de volver */
+.back {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back:hover {
+  background-color: #0056b3;
+}
+
+/* Botones de acción */
+.edit-button,
+.delete-button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Tabla responsiva */
+.rdt_Table {
+  width: 100%;
+  overflow-x: auto;
+  background-color: transparent;
+  border: none;
+}
+
+
+/* Fondo de las filas */
+.rdt_TableRow {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  color: #fff; /* Texto blanco */
+}
+
+/* Fondo alternativo para filas (striped effect) */
+.rdt_TableRow:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2); /* Otro tono para filas alternas */
+}
+
+/* Cambiar estilo de encabezados */
+.rdt_TableHeadRow {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+  color: #fff; /* Texto blanco */
+}

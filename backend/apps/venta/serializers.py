@@ -11,3 +11,7 @@ class VentaSerializer(serializers.ModelSerializer):
         fields = ['numero_venta', 'fecha_venta', 'precio_venta', 'cantidad', 'cliente', 'cliente_nombre',
          'producto', 'producto_desc', 'sucursal', 'sucursal_nombre' ]
     
+    def validate_numero_venta(self, value):
+        if value < 1:
+            raise serializers.ValidationError("El número de venta debe ser 1 o mayor.")
+        return value

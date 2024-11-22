@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'secret-key')
 
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['.vercel.app', 'tu-dominio.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
@@ -136,11 +136,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT', default=3306, cast=int),
+        'NAME': os.getenv('MYSQLDATABASE'),
+        'USER': os.getenv('MYSQLUSER'),
+        'PASSWORD': os.getenv('MYSQLPASSWORD'),
+        'HOST': os.getenv('MYSQLHOST'),
+        'PORT': os.getenv('MYSQLPORT'),
+        # 'OPTIONS': {
+        #     'unix_socket': '/opt/lampp/var/mysql/mysql.sock',
+        # },
     }
 }
 

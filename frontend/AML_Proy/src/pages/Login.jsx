@@ -15,7 +15,7 @@ function Login() {
   
   return (
     <div className="form-wrapper">      
-      <img ref={logoRef} className="logo" src="../../public/logo-circulo.svg" />
+      <img ref={logoRef} className="logo"/>
       <Form route="/api/token/" method="login" message="¡Bienvenido de nuevo!" />
     </div>
   );

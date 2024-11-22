@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://companymanagement-three.vercel.app/",    
+    "http://companymanagement-three.vercel.app",    
     "http://localhost:5173",
 ]
 

@@ -138,10 +138,9 @@ function Sales() {
       setIsAdding(false);
       setErrorMessage("");
     } catch (error) {
-      console.error("Error al crear venta:", error.response);
-      // Verifica si el error es por número de venta duplicado
+      console.error("Error al crear venta:", error.response);      
       if (error.response && error.response.data.numero_venta) {
-        setErrorMessage("Error: " + error.response.data.numero_venta[0]);
+        setErrorMessage("Error: el numero de venta ya existe");
       } else {
         setErrorMessage("Error desconocido: " + error.message);
       }

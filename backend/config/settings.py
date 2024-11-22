@@ -131,19 +131,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-#mysql://root:BzeUbJTAdxJzECDPBVnryHTDIMzUjVOe@autorack.proxy.rlwy.net:44842/railway
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('railway'),
-        'USER': os.getenv('DB_USER', 'root'),
-        'PASSWORD': os.getenv('BzeUbJTAdxJzECDPBVnryHTDIMzUjVOe'),
-        'HOST': os.getenv('autorack.proxy.rlwy.net'),
-        'PORT': int(os.getenv('44842')),        
-        'OPTIONS': {
-            'unix_socket': os.getenv('OPTIONS'),
-        },
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': int(os.getenv('DB_PORT')),        
+        # 'OPTIONS': {
+        #     'unix_socket': os.getenv('OPTIONS'),
+        # },
     }
 }
 

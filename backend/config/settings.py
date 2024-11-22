@@ -141,9 +141,9 @@ DATABASES = {
         'PASSWORD': os.getenv('BzeUbJTAdxJzECDPBVnryHTDIMzUjVOe'),
         'HOST': os.getenv('autorack.proxy.rlwy.net'),
         'PORT': int(os.getenv('44842')),        
-        'OPTIONS': {
-            'unix_socket': os.getenv('OPTIONS'),
-        },
+        # 'OPTIONS': {
+        #     'unix_socket': os.getenv('OPTIONS'),
+        # },
     }
 }
 

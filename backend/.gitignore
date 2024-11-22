@@ -20,5 +20,3 @@ db.sqlite3
 media/
 venv/
 
-Dockerfile
-docker-compose.yml

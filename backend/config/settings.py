@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'secret-key')
 
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1', 'dazzling-expression-production.up.railway.app']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 

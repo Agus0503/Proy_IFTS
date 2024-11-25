@@ -48,7 +48,7 @@ function Sales() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/ventas");
+        const response = await axios.get("http://localhost:8000/api/ventas");        
         setSales(response.data);
       } catch (error) {
         console.error("Error fetching sales:", error);

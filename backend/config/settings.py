@@ -140,15 +140,14 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),        
-        # 'OPTIONS': {
-        #     'unix_socket': os.getenv('OPTIONS'),
-        # },
+        'OPTIONS': {
+            'unix_socket': os.getenv('OPTIONS'),
+        },
     }
 }
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://tu-dominio-vercel.vercel.app',
+CSRF_TRUSTED_ORIGINS = [    
     'http://localhost:5173',
 ]
 

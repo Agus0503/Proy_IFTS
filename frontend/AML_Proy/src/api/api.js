@@ -3,7 +3,7 @@ import { ACCESS_TOKEN } from "../constants";
 
 
 const api = axios.create({
-  baseURL: "http://localhost:8000", // Cambia esto según tu backend
+  baseURL: "http://localhost:8000",   
   headers: {
     "Content-Type": "application/json",
   },

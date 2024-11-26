@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import DataTable from "react-data-table-component";
+import LoadingIndicator from "../LoadingIndicator";
 import "./Sales.css";
 import "styled-components";
 import EditSale from "./EditSale";
@@ -13,6 +14,7 @@ function Sales() {
   const [editMode, setEditMode] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const columns = [
@@ -176,6 +178,7 @@ function Sales() {
         data={sales}
         pagination
         paginationRowsPerPageOptions={[5, 10, 15, 20]}
+        noDataComponent={loading || <LoadingIndicator/>}
       />
 
       {editingSale && (
